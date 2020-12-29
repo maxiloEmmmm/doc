@@ -1,13 +1,14 @@
 const path = require('path')
-
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
-
+const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   //子网站使用
-  publicPath: process.env.NODE_ENV === 'production' ? '/doc' : '/',
+  publicPath: isProd ? '/doc' : '/',
   outputDir: './docs',
+  productionSourceMap: isProd,
   css: {
     loaderOptions: {
       less: {
@@ -44,6 +45,18 @@ module.exports = {
         config: resolve('src/config'),
         store: resolve('src/store'),
       }
-    }
-  }
+    },
+    ...(isProd ? {
+      plugins: [
+          new CompressionWebpackPlugin({
+              filename: '[path].gz[query]',
+              algorithm: 'gzip',
+              test: /\.(js|css)(\?.*)?$/i,
+              threshold: 2048,
+              minRatio: 0.8,
+              deleteOriginalAssets: false
+          })
+      ]
+    } : {})
+  },
 }
