@@ -8,7 +8,7 @@ module.exports = {
   //子网站使用
   publicPath: isProd ? '/doc' : '/',
   outputDir: './docs',
-  productionSourceMap: isProd,
+  productionSourceMap: !isProd,
   css: {
     loaderOptions: {
       less: {
