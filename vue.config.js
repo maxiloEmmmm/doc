@@ -6,7 +6,7 @@ function resolve(dir) {
 
 module.exports = {
   //子网站使用
-  // publicPath: process.env.NODE_ENV === 'production' ? '/xxx' : '/xx',
+  publicPath: process.env.NODE_ENV === 'production' ? '/doc' : '/',
   outputDir: './docs',
   css: {
     loaderOptions: {
