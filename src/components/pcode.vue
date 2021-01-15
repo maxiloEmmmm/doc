@@ -53,9 +53,8 @@ export default {
             return `./${this.dir}/${this.src}`
         }
     },
-    mounted() {
+    activated() {
         require('vendor/prism')
-        console.log(this)
     },
     methods: {
         onClick() {
