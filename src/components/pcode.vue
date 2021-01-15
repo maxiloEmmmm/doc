@@ -53,10 +53,9 @@ export default {
             return `./${this.dir}/${this.src}`
         }
     },
-    beforeRouteEnter(to, from, next) {
-        next(vm => {
-            vm.$nextTick(() => require('vendor/prism'))
-        })
+    mounted() {
+        let prism = require('vendor/prism')
+        Prism.highlightAll()
     },
     methods: {
         onClick() {
