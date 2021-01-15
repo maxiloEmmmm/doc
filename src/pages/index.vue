@@ -16,24 +16,24 @@ export default {
                                 <a-icon type="video-camera" />
                                 <router-link to={{path: '/vue/src'}} tag='span'>Vue</router-link>
                             </a-menu-item>
-                            <a-menu-item key="1-2">
+                            {/*<a-menu-item key="1-2">
                                 <a-icon type="video-camera" />
                                 <span class="nav-text">Vue-Router</span>
                             </a-menu-item>
                             <a-menu-item key="1-3">
                                 <a-icon type="video-camera" />
                                 <span class="nav-text">Vuex</span>
-                            </a-menu-item>
+                            </a-menu-item>*/}
                         </a-sub-menu>
                         <a-sub-menu key="/pkg" title='Pkg'>
-                            <a-menu-item key="2-1">
+                            {/*<a-menu-item key="2-1">
                                 <a-icon type="video-camera" />
                                 <span class="nav-text">Framework</span>
                             </a-menu-item>
                             <a-menu-item key="2-2">
                                 <a-icon type="video-camera" />
                                 <span class="nav-text">YszUI</span>
-                            </a-menu-item>
+                            </a-menu-item>*/}
                             <a-menu-item key="/pkg/antd-vue-tool">
                                 <a-icon type="video-camera" />
                                 <router-link to={{path: '/pkg/antd-vue-tool'}} tag='span'>Antd-Vue-Tool</router-link>
