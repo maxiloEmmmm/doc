@@ -7,5 +7,5 @@ import './validate';
 import './utils';
 import './component';
 
-maxiloVue.targetComponent = App;
+maxiloVue.target = App;
 maxiloVue.run();

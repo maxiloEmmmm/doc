@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "watch": "vue-cli-service build --watch",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev test",
+    "docs:build": "vuepress build test"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.0",
@@ -19,8 +21,12 @@
     "maxilo-vue": "^3.0.7-beta13",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.1",
-    "sass": "^1.26.3",
+    "sass": "^1.32.2",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.8.0"
+  },
+  "dependencies": {
+    "d3": "6"
   }
 }

@@ -44,6 +44,7 @@ module.exports = {
         'vue$': 'vue/dist/vue.js',
         config: resolve('src/config'),
         store: resolve('src/store'),
+        vendor: resolve('src/vendor'),
       }
     },
     ...(isProd ? {
