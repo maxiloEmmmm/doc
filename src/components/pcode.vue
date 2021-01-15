@@ -53,8 +53,10 @@ export default {
             return `./${this.dir}/${this.src}`
         }
     },
-    activated() {
-        require('vendor/prism')
+    beforeRouteEnter(to, from, next) {
+        next(vm => {
+            vm.$nextTick(() => require('vendor/prism'))
+        })
     },
     methods: {
         onClick() {
